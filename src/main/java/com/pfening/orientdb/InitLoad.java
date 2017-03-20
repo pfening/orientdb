@@ -7,6 +7,7 @@ import com.tinkerpop.blueprints.impls.orient.OrientGraphFactory;
 import database.DataBean;
 import database.DataDAO;
 import database.Database;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -31,7 +32,8 @@ public class InitLoad {
             String supervisor = n.getSupervisor();
             String excmod = n.getExcmod();
             String country = n.getCountry();
-
+            String now = OffsetDateTime.now().toString();
+            
                 System.out.println(fname+" "+lname+" "+id+" "+supervisor+" "+excmod+" "+country);
             
             Vertex gperson = g.addVertex("class:GDDB_Person");
@@ -41,7 +43,8 @@ public class InitLoad {
             gperson.setProperty("manager", supervisor);
             gperson.setProperty("moddate", excmod);
             gperson.setProperty("country", country);   
-            
+            gperson.setProperty("Record_status", "Active");
+            gperson.setProperty("Record_entered", now);
             counrties.add(country);
             managers.add(supervisor);
         }

@@ -7,6 +7,8 @@ public class DataBean {
     private String excmod;  
     private String supervisor;  
     private String country;
+    private String exc;
+    private String status;
            
     public DataBean(){
     
@@ -19,6 +21,12 @@ public class DataBean {
         this.excmod = excmod;   
         this.supervisor = supervisor;  
         this.country = country;
+    }
+    
+    public DataBean(String id,String exc,String status) {
+        this.id = id;
+        this.exc = exc;
+        this.status = status;  
     }
 
     public String getFname() {
@@ -68,4 +76,21 @@ public class DataBean {
     public void setCountry(String country) {
         this.country = country;
     }  
+
+    public String getExc() {
+        return exc;
+    }
+
+    public void setExc(String exc) {
+        this.exc = exc;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
 }

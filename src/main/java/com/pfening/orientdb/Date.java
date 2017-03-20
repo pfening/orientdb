@@ -5,24 +5,12 @@
  */
 package com.pfening.orientdb;
 
-import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
-import java.time.OffsetTime;
-import java.time.ZoneId;
-import java.time.ZoneOffset;
-import java.time.ZonedDateTime;
 
-/**
- *
- * @author PFENIGA1
- */
 public class Date {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        OffsetDateTime now = OffsetDateTime.now();
+        String now = OffsetDateTime.now().toString();
         System.out.println(now);
     }
     
