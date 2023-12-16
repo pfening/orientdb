@@ -20,7 +20,7 @@ public class Main {
     public static void main(String[] args) {
 
         OrientDB orient = new OrientDB("remote:localhost", OrientDBConfig.defaultConfig());
-        ODatabaseSession db = orient.open("dummy", "root", "770922");
+        ODatabaseSession db = orient.open("dummy", "root", "");
 
         createSchema(db);
 
